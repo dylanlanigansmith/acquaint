@@ -18,7 +18,7 @@ export default async function Register(){
         type : "email",
         value : email
       }, password)
-      redirect('/auth/login');
+      redirect('/login');
     }
   }
 
@@ -35,7 +35,7 @@ export default async function Register(){
               </SignupForm>
               <p className="text-center text-sm text-gray-600">
             {'Already have an account? '}
-            <a href="/auth/login" className="font-semibold text-gray-800">
+            <a href="/login" className="font-semibold text-gray-800">
               Sign in
             </a>
             {' instead.'}

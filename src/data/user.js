@@ -1,9 +1,11 @@
 import { query, user_query } from "@/data/db";
 
-import { create_password_for_user } from "@/data/shadow";
+import { create_password_for_user, verify_password_for_user } from "@/data/shadow";
 
 function bad_user(user) {
-  return user == null || !user;
+  //wrapper so we can add logic like : user is deleted account etc
+
+  return user == null;
 }
 
 export function unknown_user(params) {
@@ -32,14 +34,20 @@ export async function get_user_by_identifier(username_or_email) {
   return user;
 }
 
+
+
+
 export async function get_user_by_auth(form_of_auth, password) {
+
   let user = null;
-  user = get_user_by_identifier(form_of_auth);
-  if (bad_user()) return { status: "not found" };
+  let ret = {user: null };
+  user = await get_user_by_identifier(form_of_auth);
+  console.log(`${form_of_auth} ${password} - ${(user != null) ? JSON.stringify(user) : "user is null"}`)
+  if (bad_user(user)) return { status: "not found", ...ret};
 
-  if (!verify_password_for_user(user, password)) return { status: "incorrect" };
+  if (!verify_password_for_user(user, password)) return {status: "incorrect", ...ret};
 
-  return user;
+  return {status: "valid", user: user};
 }
 
 export async function create_user(

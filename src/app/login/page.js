@@ -1,6 +1,7 @@
-import SignInForm from "@/components/input/SigninForm";
-import SubmitButton from "@/components/input/SubmitButton";
-import { signIn } from "next-auth/react";
+'use client'
+import SignInForm from "@/components/client/input/SigninForm";
+import SubmitButton from "@/components/client/input/SubmitButton";
+import { signIn } from 'next-auth/react'
  
 
 export default async function Login(){
@@ -12,15 +13,14 @@ export default async function Login(){
               <p className="text-sm text-gray-500">
                 Use your email and password to sign in
               </p>
-              <SignInForm action={async (formData) => {
-            'use server';
-          
+              <SignInForm  action={async (formData) => {
             await signIn('credentials', {
-              redirect: '/',
-              email: formData.get('email'),
-              password: formData.get('password') ,
+              redirectTo: '/',
+              username: formData.get('email') ,
+              password: formData.get('password')
             });
-          }}>
+            location.href = "/"
+          }} >
 
               <SubmitButton><p className="text-sm font-semibold text-gray-900">
                 Sign In

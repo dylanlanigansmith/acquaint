@@ -13,8 +13,8 @@ export default async function AuthBox({name}) {
          
           <div className="flex justify-center">
             <div className="flex space-x-4">
-            <BasicButton key="loginbutton" label="Login" href="/auth/login"></BasicButton>
-            <BasicButton key="signupbutton" label="Register" href="register"></BasicButton>
+            <BasicButton key="loginbutton" label="Login" href="/login"></BasicButton>
+            <BasicButton key="signupbutton" label="Register" href="/register"></BasicButton>
              </div>
         </div>
         </div>
