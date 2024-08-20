@@ -67,6 +67,7 @@ function postactions(){
 export default async function Post({ post }) {
     if (post.type != "link" && post.type != "tweet") return (null);
     let user = await get_user_by_id(post.userid)
+    if(user == null) return (null)
   return (
     <div className="mt-4">
       <div className="py-2 px-5 bg-white">

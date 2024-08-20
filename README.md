@@ -8,7 +8,7 @@ I'm going back to writing webpages in C like god intended.
 
 ![an example screenshot](/demo.png)
 
-
+NextJS - NextAuth - PostgreSQL - TailwindCSS 
 
 
 [CSS Forked From Here](https://www.creative-tim.com/twcomponents/component/twiiter-clone-layout)

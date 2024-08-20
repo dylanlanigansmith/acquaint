@@ -11,7 +11,19 @@ const pool = new Pool({
 });
 
 
+
+
 export async function query(text, params) {
   const res = await pool.query(text, params);
   return res;
+}
+
+export async function user_query(querystr, params) {
+  let res = await query(querystr) //where userid=";DROP TABLE users;
+
+  if(res == null || !res) return null;
+  
+  if(res.rowCount == 0) return null;
+  let user = res.rows[0]
+  return user;
 }
