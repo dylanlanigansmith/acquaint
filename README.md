@@ -1,14 +1,13 @@
 # Quick unfinished twitter clone to see what nextjs is all about
-verdict: it is good, for javascript. nextauth is awesome. server side rendering is sweet. nextjs app handlers/routers are great, can't see the benefit of the pages stuff they were doing in the old versions. It is not good enough to convert me to a ver-cell lol
 
 
-my really slow VPS can't handle nextjs so I likely will never finish this.
-I'm going back to writing webpages in C like god intended.
+
+**NextJS - NextAuth - PostgreSQL - TailwindCSS**
 
 
-![an example screenshot](/demo.png)
+![an example screenshot](/doc/demo_signedin.png)
 
-NextJS - NextAuth - PostgreSQL - TailwindCSS 
+
 
 
 [CSS Forked From Here](https://www.creative-tim.com/twcomponents/component/twiiter-clone-layout)
@@ -16,8 +15,16 @@ NextJS - NextAuth - PostgreSQL - TailwindCSS
 [NEXT AUTH APP API/ROUTER BROKEN DOCS FIX](https://github.com/nextauthjs/next-auth/issues/8243)
 
 
-##### Ramblings on WebDev in 2024
 
+### Ramblings on WebDev in 2024
+
+**My final opinion on this tech stack:**
+- it is good, for javascript. nextauth is awesome. server side rendering is sweet. nextjs app handlers/routers are great, can't see the benefit of the pages stuff they were doing in the old versions. 
+- It is not good enough to convert me to a ver-cel lol
+
+
+my really slow VPS can't handle nextjs so I likely will never finish this little project.
+I'm going back to writing webpages in C like god intended.
 
 I am coming to the conclusion that the talent in webdev is created by applied gatekeeping at scale. 
 A twitter clone should not be harder than writing an OS, but because it is so abstracted and inconsistently documented, with API breaking changes in weird ways along the way, it becomes more difficult in a different way.
